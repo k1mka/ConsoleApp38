@@ -4,15 +4,15 @@
 namespace ConsoleApp38
 {
 
-    class Connection
+    static class MyExtentions
     {
-        private static string connectionstring = " local DB";
-
-        public void Print()
+        public static void Print(this DateTime dateTime)
         {
-            Console.WriteLine("Использую: " + connectionstring);
+            Console.WriteLine(dateTime);
         }
+
     }
+
 
 
 
@@ -23,9 +23,10 @@ namespace ConsoleApp38
 
         static void Main(string[] args)
         {
-            Connection connection = new Connection();
-            connection.Print();
 
+            DateTime currentDataTime = DateTime.Now;
+
+            DateTime.Now.Print();
 
         }
 
